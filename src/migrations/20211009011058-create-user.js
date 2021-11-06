@@ -21,8 +21,8 @@ module.exports = {
       phoneNumber: { type: DataTypes.STRING, allowNullL: false, unique: true },
       branchId: DataTypes.UUID,
       isActive: { type: DataTypes.BOOLEAN, defaultValue: true },
-      stateID: DataTypes.STRING,
-      countryId: DataTypes.STRING,
+      stateID: DataTypes.UUID,
+      countryId: DataTypes.UUID,
       imgUrl: DataTypes.STRING,
       city: DataTypes.STRING,
 
