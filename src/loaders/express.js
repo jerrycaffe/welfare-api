@@ -1,6 +1,9 @@
 const express = require("express");
 const morgan = require("morgan");
 import compression from "compression";
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 import routes from "../routes";
 
@@ -46,7 +49,7 @@ class ExpressLoader {
    */
   server(value) {
     // Start application
-    const port = value || process.env.PORT;
+    const port = process.env.PORT || value;
     return this.app.listen(port, () => {
       //   logger.info(`Express running, now listening on port ${config.port}`);
       console.log(`Express running, now listening on port ${port}`);
